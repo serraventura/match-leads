@@ -38,3 +38,53 @@ So that leads are efficiently distributed to agents who are best suited and have
 5. **Lead Assignment:**
    - Assign the lead to the agent with the highest score, adjusted by credit proportionality.
 
+
+Data examples:
+
+```
+const leads = [
+  {
+    id: 'L1',
+    region: ['centro', 'norte'],
+    propertyType: ['house', 'apartment'],
+    marketSegmentation: 'MINHACASAMINHAVIDA'
+  },
+  {
+    id: 'L2',
+    region: ['sul', 'oeste'],
+    propertyType: ['apartment'],
+    marketSegmentation: 'LUXURY_PROPERTIES'
+  }
+];
+```
+
+```
+const stateAgentData = {
+  totalCredit: 650,
+  data: [
+    {
+      id: 'A',
+      credit: 300,
+      regionsOfInterest: ['centro', 'norte'],
+      propertyTypes: ['house', 'apartment'],
+      marketSegmentation: ['MINHACASAMINHAVIDA', 'HIGH_VALUE_PROPERTIES']
+    },
+    {
+      id: 'B',
+      credit: 200,
+      regionsOfInterest: ['norte', 'sul'],
+      propertyTypes: ['apartment'],
+      marketSegmentation: ['HIGH_VALUE_PROPERTIES']
+    },
+    {
+      id: 'C',
+      credit: 150,
+      regionsOfInterest: ['sul', 'oeste'],
+      propertyTypes: ['house'],
+      marketSegmentation: ['LUXURY_PROPERTIES']
+    }
+  ]
+};
+
+```
+
